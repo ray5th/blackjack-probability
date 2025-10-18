@@ -15,12 +15,6 @@ A comprehensive blackjack application with probability analysis, showcasing full
 - **Performance Visualization**: Matplotlib charts and real-time metrics
 - **Card Counting Analysis**: Hi-Lo system effectiveness tracking
 
-### 🔍 AI-Powered OCR
-- **Real Card Recognition**: Pytesseract-based card detection
-- **Webcam Integration**: Live card capture and injection
-- **Template Matching**: Fallback recognition system
-- **Debug Visualization**: Card detection overlay
-
 ### ⚡ High-Performance Engine
 - **WebAssembly Core**: C++ engine compiled to WASM
 - **Optimized Shuffling**: Cryptographically secure RNG
@@ -302,10 +296,6 @@ docker-compose logs -f
 - C++: Follow Google C++ Style Guide
 - Commit messages: Use conventional commits
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Card Images**: Public domain playing card designs
@@ -313,11 +303,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Libraries**: Thanks to all open-source contributors
 - **Community**: Feedback and suggestions from users
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/username/blackjack-pro/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/username/blackjack-pro/discussions)
-- **Email**: support@blackjackpro.dev
 
 ---
 
