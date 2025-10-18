@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Probability</title>
+    <link rel="stylesheet" href="/static/game.css">
+</head>
+<body>
+    <div class="game-container">
+
+        <!-- Game Area -->
+        <main class="game-area">
+            <!-- Dealer Section -->
+            <section class="dealer-section">
+                <h2>Dealer <span id="dealer-value" class="hand-value">0</span></h2>
+                <div id="dealer-hand" class="hand-display"></div>
+            </section>
+
+            <!-- Game Controls -->
+            <section class="game-controls">
+                <div class="deck-container">
+                    <div class="deck" id="deck">
+                        <div class="deck-card" data-card-index="0"></div>
+                        <div class="deck-card" data-card-index="1"></div>
+                        <div class="deck-card" data-card-index="2"></div>
+                    </div>
+                    <span style="font-size: 0.9rem; color: #bbb;">Click to Hit</span>
+                </div>
+                
+                <button id="stand-btn" class="btn btn-action">Stand</button>
+            </section>
+
+            <!-- Player Section -->
+            <section class="player-section">
+                <h2>Player <span id="player-value" class="hand-value">0</span></h2>
+                <div id="player-hand" class="hand-display"></div>
+            </section>
+        </main>
+
+        <!-- Analytics Panel -->
+        <aside class="analytics-panel">
+            <div class="panel-header">
+                <h3>📊 Game Statistics</h3>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-label">Total Score:</span>
+                    <span id="total-score" class="stat-value">100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Games Won:</span>
+                    <span id="games-won" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Games Played:</span>
+                    <span id="games-played" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Win Rate:</span>
+                    <span id="win-rate" class="stat-value">0%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Current Streak:</span>
+                    <span id="current-streak" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Best Streak:</span>
+                    <span id="best-streak" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="analytics-section">
+                <button id="run-simulation-btn" class="btn btn-secondary">Run Simulation</button>
+                <button id="hint-btn" class="btn btn-secondary">Get Hint</button>
+                <div id="simulation-results" class="results-display"></div>
+                <div id="hint-results" class="results-display"></div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Game Popup -->
+    <div id="game-popup" class="game-popup" style="display: none;">
+        <div class="popup-content">
+            <h2 id="popup-title">🃏 Blackjack n Probability</h2>
+            <p id="popup-message">Welcome to Blackjack!</p>
+            <div id="popup-rules" class="rules-text" style="display: none;">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li>Get as close to 21 as possible without going over</li>
+                    <li>Aces count as 1 or 11, face cards count as 10</li>
+                    <li>Click the deck to draw a card</li>
+                    <li>Click Stand when you're satisfied with your hand</li>
+                    <li>Dealer must hit on 16 and stand on 17</li>
+                    <li>Win: +50 points, Lose: -50 points</li>
+                </ul>
+            </div>
+            <button id="popup-button" class="btn btn-primary">Start Game</button>
+        </div>
+    </div>
+
+    <script src="/static/game.js"></script>
+</body>
+</html>
